@@ -1,0 +1,15 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="tinyPngConverter" Height="350" Width="525" Icon="icon/tiny128.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="icon/panda-png-happy.png" Stretch="None"/>
+    </Window.Background>
+    <Grid>
+        <!-- エクスプローラーからテキストファイルをドロップできる -->
+        <TextBox Name="txtbox" TextWrapping="Wrap"
+                 PreviewDragOver="txtbox_PreviewDragOver" PreviewDragLeave="txtbox_PreviewDragLeave" Drop="txtbox_Drop"
+                 IsReadOnly="True" VerticalScrollBarVisibility="Auto" Text="Please drag and drop PNG files." Opacity="0.8" >
+        </TextBox>
+    </Grid>
+</Window>
